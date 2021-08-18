@@ -115,7 +115,7 @@ header.pageHeader {
 }
 
 .navLink > .logo {
-    width: content-box;
+
     width: 101px;
     height: 33px;
     background-image: url("../img/svg/logo.svg");
@@ -148,7 +148,7 @@ header.pageHeader {
     font-style: normal;
     font-weight: 100;
     line-height: 20px;
-    letter-spacing: 0em;
+    letter-spacing: 0;
 }
 
 /*endregion*/
@@ -468,7 +468,7 @@ section.designBouquetsWrap {
     grid-column: span 6;
     background-image: url("../img/png/florist-makes-beautiful-bouquet-studio.png");
     background-size: auto 391px;
-    border-radius: 0px;
+    border-radius: 0;
 }
 
 .discountTextContent > p {
@@ -500,7 +500,7 @@ section.designBouquetsWrap {
 .steps {
     height: 232px;
     margin-top: 80px;
-    row-gap: 0px;
+    row-gap: 0;
 }
 
 .stepsTitle {
@@ -686,7 +686,7 @@ section.designBouquetsWrap {
     box-sizing: border-box;
     margin-top: 80px;
     grid-auto-flow: dense;
-    row-gap: 0px;
+    row-gap: 0;
 }
 
 .reviewsTitle {
@@ -763,7 +763,7 @@ section.designBouquetsWrap {
     z-index: 2;
     border-radius: 12px;
     margin: 52px 0 72px 0;
-    box-shadow: 0px 4px 40px rgba(217, 217, 217, 0.3);
+    box-shadow: 0 4px 40px rgba(217, 217, 217, 0.3);
     padding: 40px 108px 0 35px;
 }
 
@@ -853,6 +853,8 @@ section.designBouquetsWrap {
     width: 100%;
     height: 97px;
     background: #AE7C78;
+    display: flex;
+    justify-content: center;
 }
 
 .linkWrap > .link {
