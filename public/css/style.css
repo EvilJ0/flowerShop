@@ -6,6 +6,10 @@ html, body {
 
 }
 
+.hidden {
+    display: none;
+}
+
 .montserratFont {
     font-family: 'Montserrat', sans-serif;
     color: #AE7C78;
@@ -65,19 +69,24 @@ html, body {
     border-radius: 10px;
 }
 
-.link {
+.image {
+    border-radius: 10px;
+}
+
+.link, .link button {
     text-decoration: none;
     cursor: pointer;
-    transition: all 1s ;
+    transition: 0.5s;
+    position: relative;
 }
 
-.link:hover{
+.link:hover {
     transform: scale(1.1);
-    transition: all 0.1s
+
 }
 
-.link:active{
-    transform: translate(0,2px);
+.link:active {
+    transform: translate(0, 2px);
     transition: all 0.1s
 }
 
@@ -114,7 +123,7 @@ header.pageHeader {
     width: content-box;
 }
 
-.navLink > .logo {
+.navLink .logo {
 
     width: 101px;
     height: 33px;
@@ -143,7 +152,7 @@ header.pageHeader {
     text-decoration: none;
 }
 
-.navLink > .linkContent {
+.navLink .linkContent {
     font-size: 16px;
     font-style: normal;
     font-weight: 100;
@@ -164,19 +173,19 @@ section.designBouquetsWrap {
 
 }
 
-.designBouquetsContent > p:nth-child(1) {
+.designBouquetsContent h3 {
     font-style: normal;
     font-weight: normal;
     font-size: 44px;
     line-height: 59px;
 }
 
-.designBouquetsContent > p:nth-child(1) > span {
+.designBouquetsContent h3 span {
     font-style: italic;
 }
 
 
-.designBouquetsContent > p:nth-child(2) {
+.designBouquetsContent p:nth-child(2) {
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
@@ -200,12 +209,7 @@ section.designBouquetsWrap {
     font-weight: normal;
     font-size: 16px;
     line-height: 20px;
-}
-
-.designBouquetsContent > .imageContainer {
-    width: 100%;
-    height: 404px;
-
+    border: none;
 }
 
 .designBouquetsContent {
@@ -215,16 +219,6 @@ section.designBouquetsWrap {
 
 .designBouquetsContent:nth-child(2) {
     justify-content: flex-end;
-}
-
-.designBouquetsContent:nth-child(2) > .imageContainer {
-    background-image: url("../img/png/anna-tukhfatullina-food-photographer-stylist-bq6Gd7pQznU-unsplash.png");
-    background-size: 404px;
-}
-
-.designBouquetsContent:nth-child(3) > .imageContainer {
-    background-image: url("../img/png/taisiia-shestopal-JZDyFwGAEqY-unsplash.png");
-    background-size: 420px;
 }
 
 .designBouquetsContent:nth-child(3) {
@@ -245,17 +239,17 @@ section.designBouquetsWrap {
 
 }
 
-.contentBenefits:nth-child(2n) {
+.contentBenefits:nth-child(2n+1) {
     display: flex;
     flex-direction: column;
     grid-column: span 3;
 }
 
-.contentBenefits:nth-child(2n) > p {
+.contentBenefits:nth-child(2n+1) p {
     margin: 0;
 }
 
-.contentBenefits:nth-child(2n) > p:nth-child(1) {
+.contentBenefits:nth-child(2n+1) p:first-child {
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -263,28 +257,28 @@ section.designBouquetsWrap {
     margin: 0 0 8px 0;
 }
 
-.contentBenefits:nth-child(2n) > p:nth-child(2) {
+.contentBenefits:nth-child(2n+1) p:last-child {
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
     line-height: 20px;
 }
 
-.contentBenefits:nth-child(2n-1) {
+.contentBenefits.imageContainer {
     display: flex;
     background-position: top right;
     background-size: auto 52px;
 }
 
-.contentBenefits:nth-child(1) {
+.contentBenefits.imageContainer:nth-of-type(1) {
     background-image: url("../img/svg/fastDelivery.svg");
 }
 
-.contentBenefits:nth-child(3) {
+.contentBenefits.imageContainer:nth-of-type(3) {
     background-image: url("../img/svg/bouquet.svg");
 }
 
-.contentBenefits:nth-child(5) {
+.contentBenefits.imageContainer:nth-of-type(5) {
     background-image: url("../img/svg/camera.svg");
 }
 
@@ -297,7 +291,7 @@ section.designBouquetsWrap {
     align-items: center;
 }
 
-.popularBouquets > p {
+.popularBouquets h3 {
     font-style: normal;
     font-weight: bold;
     font-size: 36px;
@@ -317,37 +311,30 @@ section.designBouquetsWrap {
     justify-content: flex-start;
 }
 
-.popularBouquetsContent:nth-last-child(1) {
-
-    grid-column: span 4;
-
-}
-
-.popularBouquetsContent:nth-last-child(2) {
-
+.popularBouquetsContent:first-child, .popularBouquetsContent:last-child {
     grid-column: span 4;
 }
 
-.popularBouquetsContent > p {
+.popularBouquetsContent p {
     margin: 27px 0 0 0;
 }
 
-.popularBouquetsContent > p:nth-child(1) {
+.popularBouquetsContent p:nth-child(1) {
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
     line-height: 29px;
 }
 
-.popularBouquetsContent > .buttonWrap {
+.popularBouquetsContent .buttonWrap {
     margin: 64px 0 0 0;
 }
 
-.popularBouquetsContent.imageContainer {
-    height: 438px;
-    background-image: url("../img/png/imgbin_flower-bouquet-cut-flowers-floral-design-garden-roses.png");
-    background-size: 387px;
-}
+/*.popularBouquetsContent.imageContainer {*/
+/*    height: 438px;*/
+/*    background-image: url("../img/png/popularBouquet.png");*/
+/*    background-size: 387px;*/
+/*}*/
 
 .popularBouquets > .buttonWrap {
     grid-column: span 8;
@@ -365,19 +352,18 @@ section.designBouquetsWrap {
     height: 15px;
     width: 51px;
     margin: 0 5px 0 5px;
+    border: none;
+    z-index: 2;
+    background-color: transparent;
 
 }
 
 .arrowLeft.imageContainer {
     background-image: url("../img/svg/arrow_1.svg");
-
-    z-index: 2
 }
 
 .arrowRight.imageContainer {
     background-image: url("../img/svg/arrow_2.svg");
-
-    z-index: 2
 }
 
 /*endregion*/
@@ -387,7 +373,16 @@ section.designBouquetsWrap {
     margin-top: 80px;
 }
 
-.catalogSections > .imageContainer {
+.catalogContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #AE7C78;
+    border-radius:10px;
+}
+
+.catalogSections .catalogContent {
     grid-column: span 4;
     height: 442px;
     display: flex;
@@ -397,12 +392,12 @@ section.designBouquetsWrap {
     position: relative;
 }
 
-.catalogSections > .imageContainer > p {
+.catalogSections .catalogContent p, .catalogSections .catalogContent h4 {
     margin: 0;
     z-index: 2;
 }
 
-.catalogSections > .imageContainer > p:nth-child(1) {
+.catalogSections .catalogContent h4 {
     font-style: normal;
     font-weight: bold;
     font-size: 36px;
@@ -412,7 +407,7 @@ section.designBouquetsWrap {
     color: white;
 }
 
-.catalogSections > .imageContainer > p:nth-child(2) {
+.catalogSections .catalogContent p {
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -421,25 +416,10 @@ section.designBouquetsWrap {
     margin: 8px 0 0 0;
 }
 
-.catalogSections > .imageContainer:nth-child(1) {
-    background-image: url("../img/png/sammi-sP5CaWEN7Do-unsplash.png");
-    background-size: auto 443px;
-}
-
-.catalogSections > .imageContainer:nth-child(2) {
-    background-image: url("../img/png/fresh-beautiful-peony-flowers-vase.png");
-    background-size: auto 443px;
-}
-
-.catalogSections > .imageContainer:nth-child(3) {
-    background-image: url("../img/png/alyssa-strohmann-tnpr-hPOta0-unsplash.png");
-    background-size: auto 443px;
-}
-
-.imageContainer > .imageContainer {
+.catalogContent .image {
     width: 100%;
     height: 100%;
-    background: rgba(174, 124, 120, 0.6);
+    opacity: 0.6;
     position: absolute;
     z-index: 1;
 }
@@ -464,20 +444,20 @@ section.designBouquetsWrap {
     height: 100%;
 }
 
-.discount > .imageContainer {
+.discount .imageContainer {
     grid-column: span 6;
-    background-image: url("../img/png/florist-makes-beautiful-bouquet-studio.png");
+    background-image: url("../img/jpg/floristBbouquet.jpg");
     background-size: auto 391px;
     border-radius: 0;
 }
 
-.discountTextContent > p {
+.discountTextContent p, .discountTextContent h3 {
     color: white;
     margin: 0;
 }
 
-.discountTextContent > p:nth-child(1),
-.discountTextContent > p:nth-child(2) {
+.discountTextContent h3,
+.discountTextContent p:first-of-type {
     font-style: normal;
     font-weight: normal;
     font-size: 44px;
@@ -486,7 +466,7 @@ section.designBouquetsWrap {
     margin: 40px 0 0 0;
 }
 
-.discountTextContent > p:nth-child(3) {
+.discountTextContent p:last-of-type {
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
@@ -511,7 +491,7 @@ section.designBouquetsWrap {
     margin: 0;
 }
 
-.stepsTitle > p {
+.stepsTitle h2 {
     text-align: center;
     font-style: normal;
     font-weight: bold;
@@ -522,15 +502,6 @@ section.designBouquetsWrap {
 
 }
 
-
-.stepsWrap {
-
-    /* grid-column: span 12; */
-    height: 184px;
-    margin: 0;
-    /* display: flex; */
-}
-
 .stepsContainer {
     grid-column: span 3;
     height: 184px;
@@ -539,19 +510,18 @@ section.designBouquetsWrap {
     align-items: center;
 }
 
-.stepsContainer > .imageContainer {
-
+.stepsContainer .imageContainer {
     height: 52px;
     width: 100%;
     margin: 37px 0 0 0;
 }
 
-.stepsContainer > p {
+.stepsContainer p, .stepsContainer h3 {
     margin: 0;
     text-align: center;
 }
 
-.stepsContainer > p:nth-child(2) {
+.stepsContainer h3 {
     margin-top: 8px;
     font-style: normal;
     font-weight: 500;
@@ -559,7 +529,7 @@ section.designBouquetsWrap {
     line-height: 20px;
 }
 
-.stepsContainer > p:nth-child(3) {
+.stepsContainer p {
     margin-top: 8px;
     font-style: normal;
     font-weight: normal;
@@ -567,19 +537,19 @@ section.designBouquetsWrap {
     line-height: 20px;
 }
 
-.stepsContainer:nth-child(2) > .imageContainer {
+.stepsContainer:nth-last-child(4) .imageContainer {
     background-image: url("../img/svg/computer.svg");
 }
 
-.stepsContainer:nth-child(3) > .imageContainer {
+.stepsContainer:nth-last-child(3) .imageContainer {
     background-image: url("../img/svg/details.svg");
 }
 
-.stepsContainer:nth-child(4) > .imageContainer {
+.stepsContainer:nth-last-child(2) .imageContainer {
     background-image: url("../img/svg/paymant.svg");
 }
 
-.stepsContainer:nth-child(5) > .imageContainer {
+.stepsContainer:nth-last-child(1) .imageContainer {
     background-image: url("../img/svg/fastDelivery.svg");
 }
 
@@ -598,22 +568,22 @@ section.designBouquetsWrap {
 
 }
 
-.news > .imageContainer:nth-child(2), .news > .imageContainer:nth-child(3) {
+.news .imageContainer:nth-last-child(3), .news .imageContainer:nth-last-child(2) {
     grid-column: span 3;
 }
 
-.news > .imageContainer:nth-child(4) {
+.news .imageContainer:nth-last-child(1) {
     grid-column: span 4;
     grid-row: span 2;
 
 }
 
-.newsTextContainer > p {
+.newsTextContainer p {
     width: 80%;
     margin: 0;
 }
 
-.newsTextContainer > p:nth-child(1) {
+.newsTextContainer h3 {
     font-style: normal;
     font-weight: bold;
     font-size: 36px;
@@ -622,7 +592,7 @@ section.designBouquetsWrap {
     margin-top: 70px;
 }
 
-.newsTextContainer > :nth-child(2) {
+.newsTextContainer p {
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
@@ -636,44 +606,44 @@ section.designBouquetsWrap {
     display: flex;
 }
 
-.imageWrap > .link > .imageContainer {
+.imageWrap .link .imageContainer {
     height: 100%;
     width: 30px;
     border-radius: 0;
 }
 
-.imageWrap > .link:nth-child(1) > .imageContainer {
+.newsTextContainer .link:nth-child(1) .imageContainer {
     width: 21px;
     background-image: url("../img/svg/instagramm.svg");
 }
 
-.imageWrap > .link:nth-child(2) > .imageContainer {
+.newsTextContainer .link:nth-child(2) .imageContainer {
     width: 12px;
     background-image: url("../img/svg/facebook.svg");
     margin: 0 20px 0 20px;
 }
 
-.imageWrap > .link:nth-child(3) > .imageContainer {
+.newsTextContainer .link:nth-child(3) .imageContainer {
     width: 20px;
     background-image: url("../img/svg/twitter.svg");
 }
 
-.news > .imageContainer {
+.news .imageContainer {
     border-radius: 0;
 }
 
-.news > .imageContainer:nth-child(2) {
-    background-image: url("../img/png/samantha-gades-nysCDwot01c-unsplash.png");
+.news > .imageContainer:nth-last-child(3) {
+    background-image: url("../img/jpg/biutifulBouquet_1.jpg");
     background-size: auto 220px;
 }
 
-.news > .imageContainer:nth-child(3) {
-    background-image: url("../img/png/insung-yoon-jRofmV5rPl0-unsplash.png");
+.news > .imageContainer:nth-last-child(2) {
+    background-image: url("../img/jpg/biutifulBouquet_2.jpg");
     background-size: auto 220px;
 }
 
-.news > .imageContainer:nth-child(4) {
-    background-image: url("../img/png/demi-he-hPcxvCecdPI-unsplash.png");
+.news > .imageContainer:nth-last-child(1) {
+    background-image: url("../img/jpg/biutifulBouquet_3.jpg");
     background-size: auto 460px;
 }
 
@@ -693,7 +663,7 @@ section.designBouquetsWrap {
     grid-column: span 12;
 }
 
-.reviewsTitle > p {
+.reviewsTitle h2 {
     margin: 40px;
     font-style: normal;
     font-weight: bold;
@@ -709,15 +679,16 @@ section.designBouquetsWrap {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0;
 }
 
-.reviewsContent > p {
+.reviewsContent p {
     margin: 0;
     text-align: center;
     width: 79%;
 }
 
-.reviewsContent > p:nth-child(1) {
+.reviewsContent p:first-child {
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -725,7 +696,7 @@ section.designBouquetsWrap {
     text-align: center;
 }
 
-.reviewsContent > p:nth-child(2) {
+.reviewsContent p:last-child {
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -749,7 +720,7 @@ section.designBouquetsWrap {
     height: 100%;
     z-index: 1;
     justify-self: center;
-    background-image: url("../img/png/map.png");
+    background-image: url("../img/jpg/map.jpg");
     border-radius: 0;
     background-size: auto 645px;
 }
@@ -762,21 +733,20 @@ section.designBouquetsWrap {
     background-color: white;
     z-index: 2;
     border-radius: 12px;
-    margin: 52px 0 72px 0;
+    margin-top: 52px;
     box-shadow: 0 4px 40px rgba(217, 217, 217, 0.3);
     padding: 40px 108px 0 35px;
 }
 
-.contactsContainer > p {
+.contactsContainer p {
     margin: 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
 }
 
-.contactsContainer > p, .contactsContainer > a {
-    z-index: 3;
-}
-
-
-.contactsContainer > p:nth-child(1) {
+.contactsContainer h3 {
     font-style: normal;
     font-weight: bold;
     font-size: 36px;
@@ -784,63 +754,27 @@ section.designBouquetsWrap {
 
 }
 
-.contactsContainer > p:nth-child(2) {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 20px;
-    margin-top: 42px;
+.contactsContainer p:first-of-type {
+    margin: 42px 0 21px 0;
 }
 
-.contactsContainer > p:nth-child(3) {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
-    margin-top: 21px;
-}
-
-.contactsContainer > p:nth-child(4) {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 20px;
+.contactsContainer p:nth-of-type(2) {
     margin-top: 32px;
 }
 
-.contactsContainer > p:nth-child(5) {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
-    margin-top: 14px;
-}
-
-.contactsContainer > p:nth-child(6) {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 20px;
+.contactsContainer p:nth-of-type(3) {
     margin: 30px 0 14px 0;
 }
 
-.contactsContainer > a:nth-child(7) {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
-    margin-top: 14px;
+.contactsContainer p:nth-of-type(4) {
+    margin-bottom: 17px;
 }
 
-.contactsContainer > p:nth-child(8) {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 20px;
+.contactsContainer p:last-of-type {
     margin: 35px 0 17px 0;
 }
 
-.contactsContainer > a:nth-child(9) {
+.contactsContainer a {
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -849,6 +783,7 @@ section.designBouquetsWrap {
 
 /*endregion*/
 
+/*region page footer*/
 .pageFooter {
     width: 100%;
     height: 97px;
@@ -883,22 +818,23 @@ section.designBouquetsWrap {
     justify-content: flex-end;
 }
 
-.iconsFooter>.link>.imageContainer{
+.iconsFooter > .link > .imageContainer {
     height: 20px;
     border-radius: 0;
-    }
+}
 
-.iconsFooter>.link:nth-child(1)>.imageContainer{
+.iconsFooter > .link:nth-child(1) > .imageContainer {
     width: 20px;
     background-image: url("../img/svg/instagramm_white.svg");
 }
 
-.iconsFooter>.link:nth-child(2)>.imageContainer{
+.iconsFooter > .link:nth-child(2) > .imageContainer {
     width: 12px;
     margin: 0 21px 0 18px;
     background-image: url("../img/svg/facebook_white.svg");
 }
-.iconsFooter>.link:nth-child(3)>.imageContainer{
+
+.iconsFooter > .link:nth-child(3) > .imageContainer {
     width: 26px;
     background-image: url("../img/svg/twitter_white.svg");
 }
@@ -908,3 +844,9 @@ section.designBouquetsWrap {
     height: 32px;
     margin: 24px 0 0 0;
 }
+
+/*endregion*/
+
+
+
+
