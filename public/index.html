@@ -2,16 +2,19 @@
 <html lang="ru">
 <head>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
-          rel="stylesheet">
+          rel="preload" as="font">
     <meta charset="UTF-8">
     <title>flower shop</title>
 </head>
 <body>
-<article class="wrap">
+<div class="wrap">
+    <h1 class="hidden">Botanika. Авторские букеты в Петербурге</h1>
     <header class="pageHeader ">
+        <h2 class="hidden">панель навигации сайта</h2>
         <nav class="pageNavigation bigGrid contentWide">
             <div class="navContent">
                 <a class="navLink montserratFont link" href="" type="link">
@@ -50,24 +53,27 @@
             </div>
         </nav>
     </header>
-    <main class="mainContainer ">
+    <main class="mainContainer">
+        <h2 class="hidden">основная часть сайта</h2>
         <section class="designBouquetsWrap contentWide bigGrid">
             <div class="designBouquetsContent">
-                <p class="playfairFont">Авторские букеты<span> в Петербурге</span></p>
-
+                <h3 class="playfairFont">Авторские букеты<span> в Петербурге</span></h3>
                 <p class="montserratFont">Оригинальные свежие букеты с доставкой по всему городу</p>
                 <a class="buttonWrap link" type="link" href="">
-                    <div class="buttonLink montserratFont">Смотреть каталог</div>
+                    <button class="buttonLink montserratFont">Смотреть каталог</button>
                 </a>
             </div>
             <div class="designBouquetsContent">
-                <div class="imageContainer"></div>
+                <img class="image" src="./img/jpg/authorBouquet_1.jpg" width="388" height="404"
+                     alt="авторский букет тюльпанов">
             </div>
             <div class="designBouquetsContent">
-                <div class="imageContainer"></div>
+                <img class="image" src="./img/jpg/authorBouquet_2.jpg" width="388" height="404"
+                     alt="авторский букет роз">
             </div>
         </section>
         <section class="benefits contentWide bigGrid montserratFont">
+            <h3 class="hidden">преимущества сайта Botanika</h3>
             <div class="contentBenefits imageContainer">
             </div>
             <div class="contentBenefits">
@@ -88,7 +94,7 @@
             </div>
         </section>
         <section class="popularBouquets contentNoWide smallGrid">
-            <p class="playfairFont">Популярные букеты</p>
+            <h3 class="playfairFont">Популярные букеты</h3>
             <div class="popularBouquetsContentWrap smallGrid">
                 <div class="popularBouquetsContent montserratFont">
                     <p>Букет «Нежность»</p>
@@ -96,67 +102,72 @@
                     <p>30 × 40 см</p>
                     <p>3600 руб.</p>
                     <a class="buttonWrap  link" type="link" href="">
-                        <div class="buttonLink montserratFont">Заказать</div>
+                        <button class="buttonLink montserratFont">Заказать</button>
                     </a>
                 </div>
-                <div class="popularBouquetsContent imageContainer">
-
-                </div>
+                <img class="image" src="./img/png/popularBouquet.png" width="388" height="438"
+                     alt="популярный букет">
             </div>
             <div class="buttonWrap ">
                 <a type="link" class="link" href="">
-                    <div class="imageContainer arrowLeft"></div>
+                    <button class="imageContainer arrowLeft"></button>
                 </a>
                 <a type="link" class="link" href="">
-                    <div class="imageContainer arrowRight"></div>
+                    <button class="imageContainer arrowRight"></button>
                 </a>
             </div>
         </section>
         <section class="catalogSections contentWide bigGrid">
-            <div class="imageContainer ">
-                <p class="playfairFont">Свадебные букеты</p>
+            <h3 class="hidden">популярные букеты</h3>
+            <article class="catalogContent">
+                <h4 class="playfairFont">Свадебные букеты</h4>
                 <p class="montserratFont">Букеты для невест</p>
-                <div class="imageContainer"></div>
-            </div>
-            <div class="imageContainer">
-                <p class="playfairFont">Букеты с пионами</p>
+                <img class="image" src="./img/jpg/weddingBouquet.jpg" width="388" height="442"
+                     alt="свадебный букет">
+            </article>
+            <article class="catalogContent">
+                <h4 class="playfairFont">Букеты с пионами</h4>
                 <p class="montserratFont">Букеты с сезонными пионами</p>
-                <div class="imageContainer"></div>
-            </div>
-            <div class="imageContainer">
-                <p class="playfairFont">Выбрать букет</p>
+                <img class="image" src="./img/jpg/peoniesBouquet.jpg" width="388" height="442"
+                     alt="букет с пионами">
+            </article>
+            <article class="catalogContent">
+                <h4 class="playfairFont">Выбрать букет</h4>
                 <p class="montserratFont">Букеты в ассортименте</p>
-                <div class="imageContainer"></div>
-            </div>
+                <img class="image" src="./img/jpg/chooseBouquet.jpg" width="388" height="442"
+                     alt="букет с пионами">
+            </article>
         </section>
         <section class="contentWide bigGrid discount">
-            <div class="discountTextWrap">
-                <div class="discountTextContent">
-                    <p class="playfairFont">Скидка 10%</p>
-                    <p class="playfairFont">на первый заказ</p>
+            <h2 class="hidden">скидки</h2>
+            <article class="discountTextWrap">
+                <div class="discountTextContent playfairFont">
+                    <h3>Скидка 10%</h3>
+                    <p>на первый заказ</p>
                     <p class="montserratFont">Если заказываете у нас букет впервые — при оформлении заказа введите
                         промокод «Botanika2021» и получите скидку 10%.</p>
                 </div>
-            </div>
+            </article>
+
             <div class="imageContainer"></div>
         </section>
         <section class="steps contentWide bigGrid">
             <div class="stepsTitle playfairFont">
-                <p>4 шага к идеальному букету</p>
+                <h2>4 шага к идеальному букету</h2>
             </div>
             <div class="stepsContainer montserratFont">
                 <div class="imageContainer"></div>
-                <p>Заказ</p>
+                <h3>Заказ</h3>
                 <p>Выберите понравившийся букет из каталога и оформите заказ</p>
             </div>
             <div class="stepsContainer montserratFont">
                 <div class="imageContainer"></div>
-                <p>Уточнение деталей</p>
+                <h3>Уточнение деталей</h3>
                 <p>Наш флорист позвонит вам после оформления заказа, чтобы уточнить детали</p>
             </div>
             <div class="stepsContainer montserratFont">
                 <div class="imageContainer"></div>
-                <p>Оплата</p>
+                <h3>Оплата</h3>
                 <p>Оплатить заказ можно онлайн на сайте или при получении</p>
             </div>
             <div class="stepsContainer montserratFont">
@@ -166,8 +177,9 @@
             </div>
         </section>
         <section class="news contentWide bigGrid twoLinesGrid">
+            <h2 class="hidden">новости Botanika</h2>
             <div class="newsTextContainer">
-                <p class="playfairFont">Следите за нашими новостями</p>
+                <h3 class="playfairFont">Следите за нашими новостями</h3>
                 <p class="montserratFont">Подписывайтесь на наши соцсети и узнавайте о новинках и акциях первым.</p>
                 <div class="imageWrap">
                     <a class="link" type="link" href="https://inatgram.com" target="_blank" rel="noopener">
@@ -186,28 +198,33 @@
             <div class="imageContainer"></div>
         </section>
         <section class="reviews bigGrid contentWide">
-            <div class="reviewsTitle"><p class="playfairFont">Отзывы</p></div>
-            <div class="reviewsContent montserratFont">
+            <div class="reviewsTitle">
+                <h2 class="playfairFont">Отзывы</h2>
+            </div>
+            <blockquote class="reviewsContent montserratFont">
                 <p>Всё очень понравилось! Быстрое оформление заказа, выбор удобного времени доставки. Всем большое
                     спасибо!</p>
                 <p>Марина</p>
-            </div>
-            <div class="reviewsContent montserratFont">
+            </blockquote>
+            <blockquote class="reviewsContent montserratFont">
                 <p>Внимательные флористы, вежливые. Магазин находится прям рядом с метро. Букет очень понравился, буду
                     ещё заказывать!</p>
                 <p>Татьяна</p>
-            </div>
-            <div class="reviewsContent montserratFont">
+            </blockquote>
+            <blockquote class="reviewsContent montserratFont">
                 <p>Выбор букетов на любой вкус и цену. Бывают хорошие скидки, а флористы всегда помогут и точно соберут
                     красивый букет!</p>
                 <p>Ольга</p>
-            </div>
+            </blockquote>
         </section>
         <section class="contacts bigGrid contentWide">
+            <h2 class="hidden">контакты</h2>
             <div class="contactsContainer montserratFont">
-                <p class="playfairFont">Мы ждем вас</p>
+                <h3 class="playfairFont">Мы ждем вас</h3>
                 <p>Приходите к нам:</p>
-                <p>Санкт-Петербург, ул. Большая Конюшенная, 19</p>
+                <a href="https://google.com/maps/place/Большая+Конюшенная+ул.,+19,+Санкт-Петербург,+Россия,+191186"
+                   class="link montserratFont" type="link" target="_blank">Санкт-Петербург, ул. Большая Конюшенная,
+                    19</a>
                 <p>Режим работы:</p>
                 <p>Пн-Вск, с 9-00 до 20-00</p>
                 <p>Позвоните нам:</p>
@@ -243,7 +260,6 @@
             </div>
         </div>
     </footer>
-</article>
-
+</div>
 </body>
 </html>
